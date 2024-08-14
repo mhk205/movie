@@ -1,0 +1,54 @@
+@charset "utf-8";
+  
+header {
+    background-color: #fff;
+    color: white;
+    padding: 35px 60px; 
+}
+header img {
+    width: 160px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 50%; /* 너비 줄임 */
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 95%;  
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.form-group textarea {
+    height: 150px; /* 높이 그대로 유지 */
+    resize: none; /* 크기 조절 비활성화 */
+}
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #555;
+}
+.btn:first-child {
+        	margin-right: 5px
+}
