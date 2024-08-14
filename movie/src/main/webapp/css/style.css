@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+body {
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    width:90%;
+    margin: 0 auto;
+    padding:0 15px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left:0;
+    right:0;
+    z-index: 5;
+}
+h1 img {
+    width:160px;
+}
+
+header nav {
+    margin: 0 auto;
+}
+header nav > ul {
+    display: flex;
+    justify-content: space-between;
+}
+header nav > ul > li {
+    position: relative;
+}
+
+header nav > ul > li > a {
+    display: block;
+    padding: 50px;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+}
+header > nav > ul > li:hover > a {
+    color:#27b7ca;
+}
+header > a {
+    border-radius: 50px;
+    padding:15px 20px;
+}
+.btn > form > .text {
+    width:200px;
+    height: 26px;
+}
+.btn > form > button {
+    width:100px;
+    height: 30px;   
+    background-color: #fff;
+    border: 1px solid gray;
+}
+.btn > form > .search {
+    height: 30px;
+    background-color: #27b7ca;
+    border: 1px solid gray;
+    color:#fff;
+    margin-right: 20px;
+}
+.btn > form > button:hover {
+    background-color: #27b7ca;
+    border: none;
+    color:#fff;
+}
+.btn > form > .search:hover {
+    background-color: #27b7ca;
+    color:black;
+}
+
+/*main---------------------------*/
+
+/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.slider__img {  /* 이미지가 보이는 영역 */
+    top:50px;
+    position: relative;
+    width: 1680px;
+    height: 800px;
+    overflow: hidden;
+}
+.slider__inner {/* 전체 이미지를 감싸고 있는 부모 : 움직이는 부분 속성주기 */
+    display: flex;
+    flex-wrap: wrap;
+    width: 8400px; /* 총 5개의 이미지 */
+    height: 800px;
+}
+.slider {   /* 개별적인 이미지 (각각의 이미지 설정) */
+    position: relative;
+    width: 1680px;
+    height: 800px;
+}
+.slider::before {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 24px;
+}
+.slider:nth-child(1)::before {content: '박스오피스 1위';}
+.slider:nth-child(2)::before {content: '박스오피스 2위';}
+.slider:nth-child(3)::before {content: '박스오피스 3위';}
+.slider:nth-child(4)::before {content: '박스오피스 4위';}
+.slider:nth-child(5)::before {content: '박스오피스 5위';}
+
+.slider::after {
+    position: absolute;
+    left: 35px;
+    top: 75px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 42px;
+}
+.slider:nth-child(1)::after {content: '파일럿';}
+.slider:nth-child(2)::after {content: '사랑의 하츄핑';}
+.slider:nth-child(3)::after {content: '행복의 나라';}
+.slider:nth-child(4)::after {content: '리볼버';}
+.slider:nth-child(5)::after {content: '빅토리';}
+
+h2 {
+    font-size: 32px;
+    margin: 150px 120px 10px 100px;
+}
+h2 > img {
+    margin-right: 5px;
+    width:25px;
+}
+.movies {
+    width: 1640px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 50px;
+    margin: 50px 100px;
+}
+.movies > article {
+    margin: 10px 30px 100px 30px;
+    overflow: hidden;
+}
+.movies > article > a {
+    text-align: center;
+    width:100%;
+}
+.movies > article > a > img {
+    width:312px;
+    
+}
+
+.movies > article > a:hover img {
+    filter: brightness(50%);
+    transition-duration: 0.7s;
+    transform: scaleX(1.03);
+}
+.movies > article > a:hover .view {
+    z-index: 1;
+    transition-duration: 0.3s;
+}
+.movies > article > p {
+    font-size: 18px;
+    background-color: #fff;
+}
+
+.view {
+    position: relative;
+    font-weight: bold;
+    top: 130px;
+    border-radius: 50%;
+    align-content: center;
+    color: #fff;
+    z-index: -1;
+    font-size: 32px;
+}
+
+
+/*aside---------------------------*/
+aside {
+    position: fixed;
+    right:2%;
+    bottom:90px;
+}
+aside li {
+    margin-top:15px;
+}
+aside a {
+    display: flex;
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+}
+aside li:nth-child(1) > a {
+    background-color: #eee;
+}
+aside li:nth-child(1):hover {
+    color:#27b7ca;
+}
+aside li:nth-child(2) > a {
+    background-color: #27b7ca;
+}
+aside li:nth-child(2):hover {
+    color:#fff;
+}
+aside a img {
+    width:25px;
+}
+
+
+/*footer---------------------------*/
+footer {
+    height: 200px;
+    background-color: lightgray;
+}
+footer > img {
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
